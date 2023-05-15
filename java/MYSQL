@@ -1,0 +1,17 @@
+CREATE DATABASE bancoteste;
+USE bancoteste;
+
+CREATE TABLE usuarios(
+id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(45),
+senha VARCHAR(45)
+);
+
+# CRUD
+INSERT INTO usuarios (nome, senha)
+VALUES ('admin', '123'),
+('clara', '1234'),
+('rafael', '1234');
+SELECT * FROM bancoteste.usuarios;
+UPDATE usuarios SET nome = 'duda' WHERE id_usuario = 3;
+DELETE FROM usuarios WHERE id = 3;
